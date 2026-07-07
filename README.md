@@ -4,7 +4,7 @@
 
 ## 中文
 
-这是一次真实排障过程的去隐私化总结，针对 Windows 上 Codex Desktop 更新后出现的 **Computer Use 插件不可用** 问题。
+这是一次真实排障过程总结，针对 Windows 上 Codex Desktop 更新后出现的 **Computer Use 插件不可用** 问题。
 
 这些步骤是临时修复/排障笔记，不是 OpenAI 官方文档。修改 Codex 本地缓存或运行时文件前请保留备份；应用更新后这些改动可能会被覆盖。
 
@@ -115,10 +115,8 @@ Copy-Item -LiteralPath "<your-backup-file>" -Destination "<path-to-package.json>
 
 ### 注意事项
 
-- 不要公开你的 `auth.json`、日志数据库、订阅链接、API token、账号 ID 或机器名。
 - 不要直接删除缓存目录，优先重命名。
 - Codex 更新后运行时目录名会变化，所以每次都要重新定位最新的 `cua_node` 目录。
-- 这只是针对 Computer Use 插件不可用的本地修复。手机远程控制、浏览器网络、代理/TUN/DNS 问题属于另一类故障。
 
 ---
 
@@ -235,7 +233,5 @@ If you renamed the bundled marketplace cache, keep the `.bak-*` directory for a 
 
 ### Notes
 
-- Do not publish your `auth.json`, log databases, subscription URLs, API tokens, account IDs, or machine name.
 - Prefer renaming cache directories over deleting them.
 - Codex updates can change runtime directory names, so always locate the newest `cua_node` runtime before patching.
-- This note is only about the local Computer Use plugin. Phone remote control, browser networking, proxy/TUN, and DNS issues are separate failure classes.
